@@ -1,0 +1,10 @@
+node_modules
+.idea
+dist/*
+!dist/index.html
+!dist/icon.png
+/build/release
+npm-debug.log
+testConfig.json
+yarn-error.log
+/bin

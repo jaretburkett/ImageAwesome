@@ -1,0 +1,145 @@
+@import "../variables";
+
+@keyframes mbPulse {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.9);
+  }
+}
+.MainBody{
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:$HardwareSelector-height;
+  padding: 20px;
+  .theme-logo{
+    text-align: center;
+    width: 350px;
+    height: 100px;
+    margin: 0 auto;
+    img{
+      max-width:100%;
+      max-height:100%;
+    }
+  }
+  .main-box{
+    position:absolute;
+    bottom:20px;
+    right:20px;
+    left:20px;
+    .config-box, .result-box{
+      float: left;
+      width: calc(50% - 50px);
+      height: 100px;
+      background: white;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      color: #444;
+      text-align: center;
+      padding: 10px 20px;
+      .b-title{
+        font-weight: 800;
+        text-transform: uppercase;
+        font-size: 10px;
+        line-height: 10px;
+        color: #aaa;
+      }
+      .b-value{
+        font-size: 20px;
+        font-weight: 800;
+        line-height: 27px;
+        margin-bottom: 4px;
+        small{
+          color: #aaaaaa;
+          font-weight: 800;
+          font-size: 11px;
+          text-transform: uppercase;
+        }
+      }
+      .b-user-box{
+        margin-top: 12px;
+        position: relative;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        text-align: center;
+        cursor:pointer;
+        .icon{
+          position: absolute;
+          left: 0;
+          top: 4px;
+          height: 25px;
+        }
+        .b-user{
+          font-size: 17px;
+          background: #f9f9f9;
+          overflow: hidden;
+          font-weight: 400;
+          border-radius: 5px;
+          padding: 5px 5px 5px 10px;
+          text-align: center;
+        }
+        &.no-user{
+          background:radial-gradient(#3ca522, #3ca522, #397b29);
+          color:#fff;
+          font-weight:600;
+          text-transform: uppercase;
+          transition: transform .2s;
+          &:hover{
+            transform: scale(1.1);
+          }
+          .b-user{
+            font-weight: 600;
+            background:transparent;
+          }
+        }
+      }
+      .b-set-user-box{
+        margin-top:5px;
+      }
+    }
+
+    .start-box{
+      width:100px;
+      height:100px;
+      float:left;
+      .start-btn{
+        background: radial-gradient(#3ca522, #3ca522, #397b29);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+        width: 80px;
+        height: 80px;
+        margin: 5px auto;
+        border-radius: 50%;
+        border: 3px solid #fff;
+        line-height: 70px;
+        text-align: center;
+        cursor:pointer;
+        animation-name: mbPulse;
+        animation-duration: 1.2s;
+        animation-timing-function: ease-out;
+        animation-delay: 0;
+        animation-direction: alternate;
+        animation-iteration-count: infinite;
+        animation-fill-mode: none;
+        animation-play-state: running;
+        &:hover{
+          transform: scale(1.1);
+          animation-name: none;
+        }
+        img{
+          height: 33px;
+          margin-left: 8px;
+        }
+        &.is-mining{
+          animation-name: none;
+          background: radial-gradient(#a53524, #a53524, #8a2c1e);
+          img{
+            margin-left:0;
+          }
+        }
+      }
+    }
+  }
+}

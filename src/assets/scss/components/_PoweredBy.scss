@@ -1,0 +1,25 @@
+@import "../variables";
+
+.PoweredBy {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: rgba(95, 95, 95, 0.8);
+  padding: 5px 10px;
+  border-bottom-left-radius: 10px;
+  font-weight: 800;
+  color: #fff;
+  font-size: 15px;
+  .pb-title {
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 9px;
+    text-align: right;
+    line-height: 9px;
+    color: #969696;
+  }
+  img {
+    height: 22px;
+    margin-top: -8px;
+  }
+}

@@ -1,0 +1,52 @@
+@import "../variables";
+
+.HardwareSelector {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: $HardwareSelector-height;
+  background: rgba(54, 55, 56, 0.8);
+  .hs-title{
+    color:#fff;
+    position: absolute;
+    left: 25px;
+    top: 5px;
+    font-weight: 600;
+    font-size: 15px;
+  }
+  .hardware-box{
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    left: 20px;
+    bottom: 20px;
+    background: #fff;
+    border: 1px solid #cfd3d7;
+    border-radius: 5px;
+    overflow: auto;
+    table{
+      thead{
+        th{
+          font-size: 10px;
+        }
+      }
+      td{
+        font-size: 12px;
+      }
+      .checkbox-col{
+        padding-top: 0.18rem;
+        width: 30px;
+        img{
+          width:20px;
+          cursor:pointer;
+        }
+      }
+      .credit-col{
+        width: 100px;
+        text-align: center;
+      }
+    }
+  }
+
+}
